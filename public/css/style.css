@@ -208,19 +208,31 @@ p {
 .hero-media img {
   position: absolute;
   inset: 0;
-  z-index: -2;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-media img {
+  object-position: center;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(8, 59, 44, 0.88), rgba(8, 59, 44, 0.48), rgba(8, 59, 44, 0.18)),
-    linear-gradient(0deg, rgba(8, 59, 44, 0.7), transparent 45%);
+    linear-gradient(90deg, rgba(8, 59, 44, 0.72), rgba(8, 59, 44, 0.34), rgba(8, 59, 44, 0.12)),
+    linear-gradient(0deg, rgba(8, 59, 44, 0.46), transparent 48%);
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   padding: 120px 0 96px;
 }
 
@@ -410,6 +422,11 @@ p {
 /* Place real JPG files in public/images with the names used in the templates. Until then, this gradient preserves the visual composition. */
 .placeholder-image img.is-missing {
   opacity: 0;
+}
+
+.hero .hero-media {
+  position: absolute;
+  inset: 0;
 }
 
 .feature-grid,
